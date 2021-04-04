@@ -1,0 +1,38 @@
+body{
+    background-image: url("../images/background.jpg");
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.postButtons {
+    padding: 6px 20px;
+    background-color: #CFB53B;
+    color: black;
+    font-size: 16px;
+    border-color: #DDD;
+}
+.bodyBtns {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 40px;
+  width: 260px;
+  margin-top: -20px;
+  margin-left: -130px;
+}
+
+/* create Post Model */
+.postContent {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #ededed;
+  font-size: 14px;
+
+}

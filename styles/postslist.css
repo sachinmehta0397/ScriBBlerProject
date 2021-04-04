@@ -1,0 +1,109 @@
+body{
+    background-color: #ffeedd;
+    /* display: flex; */
+    /* flex-direction: column; */
+	}
+    p{
+        display: inline;
+    }
+.cards {
+ 
+    padding-top: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+  
+.card { 
+    margin: 18px;
+    margin-left: 60px;
+    border-radius: 15px;
+    transition: box shadow 0.3s;
+    width: 40%;
+    height: 150px;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: left;
+    display: flex;
+    
+}
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .card-title {
+    background-color: white;
+    color: #707070;
+    margin: initial;
+    font-weight: bold;
+    font-size: 16px;
+    padding-top: 55px;
+    padding-bottom: 46px;
+    text-align:center;
+    width: 15%;
+    float: left;
+    border-radius: inherit;
+    border-bottom-right-radius: 0%;
+    border-top-right-radius: 0%;
+}
+  
+  .delete {
+    float: right;
+    padding-right: 10px;
+    padding-top: 5px;
+    size: 10px;
+    cursor: pointer;
+  }
+  .card-discription {
+        background-color: #E8E8E8;
+        height: 150px; 
+        width: 83%;
+        float: right;
+        padding-left: 3%;
+        border-radius: inherit;
+        border-bottom-left-radius: 0%;
+        border-top-left-radius: 0%;
+  } 
+  .card-head {
+      color: #81869C;
+      font-family: sans-serif;
+      font-size: 19px;
+      display: flex;
+      text-overflow: initial;
+      flex-direction: row;
+      justify-content: space-between;
+   
+  }
+  .disc {
+    overflow: hidden; 
+    white-space: normal; 
+    /* height: 4.8em;   */
+    /* text-overflow: -o-ellipsis-lastline;  */
+  }
+  .ellipsis{
+    margin-left: 410px;
+    color: grey;
+    cursor: pointer;
+    padding-right: 120px;
+    margin-bottom: 4px; 
+ }
+
+
+#more {
+    display: none;
+}
+
+.yesButton {
+    background-color: rgb(94, 231, 94);
+    border: none;
+    padding: 8px 30px;
+    font-size: 16px;
+    color: white;
+}
+.noButton {
+    margin-left: 150px;
+    background-color: rgb(226, 61, 61);
+    border: none;
+    font-size: 16px;
+    padding: 8px 30px;
+    color: white;
+}

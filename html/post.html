@@ -2,17 +2,17 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/post.css">
     <!-- TODO: Include Font Awesome file here -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
     <!-- TODO: Include Google Fonts file here -->
-    <script src="https://use.fontawesome.com/3028524b82.js"></script>
+    <script src="https://kit.fontawesome.com/e2942e5994.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <!-- TODO: Include all your code for the header and home page here -->
+    <!-- TODO: Include code for header here -->
     <header>
         <div id="scribbler">
             <span class="spanTitle">
@@ -48,7 +48,7 @@
                 </form>
               </div>
             </div>
-          </div>
+        </div>
           <div id="SignInModel" class="modal">
             <!-- Modal content -->
             <div class="modal-content">
@@ -70,36 +70,49 @@
             </div>
           </div>
     </header>
-    
-    <div  class="bodyBtns"> 
-      <a href="html/postslist.html"><button class="postButtons"> All Posts </button></a>
-      <button class="postButtons" id="createPost">Create Post</button>
-    </div>
-    <div id="createPostModel" class="modal">
-      <!-- Modal content -->
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2>Pen Your Post</h2>
-          <span class="close"><i class="fa fa-times" aria-hidden="true"></i></span>
-          </div>
-        <hr>
-        <br>
-        <div class="modal-body">
-          <form action="">
-              <label for="Title">Title</label>
-              <input type="text" name="username" placeholder="Enter title of your post" required> 
-              <label for="content">Contents</label>
-              <textarea  class="postContent" type="text" rows="13" cols="200" placeholder="Enter the contents of your post" required></textarea>
-              <div style="text-align: center;">
-              <button class="submitButtons" id="modalBtn" type="submit">Create</button>
+
+    <div class="post container">
+        <div class="heading-content" contenteditable="false" id="edit-heading" contenteditable="true"></div>
+        <div class="author">
+            <div class="author-name"></div>
+            <div>
+                <button id="edit-button" type="button" class="btn btn-danger" onclick="onEdit()">Edit<i
+                        class="fa fa-edit" style="padding-left: 5px;"></i></button>
             </div>
-          </form>
         </div>
-      </div>
+
+
+        <div class="post-content" contenteditable="false" id="edit-contenttext" contenteditable="true">
+        </div>
+
+        <button id="like-button" type="button" class="btn btn-danger" onclick="countLikes()"><i
+                class="fa fa-thumbs-up"></i><span id="likeButton">Like</span></button>
+        <div id="showCount">Be the first one to like this</div>
+
+        <textarea id="comment" rows="4" cols="135" placeholder="Leave a comment..." name="comment"></textarea>
+        <div><button id="comment-button" type="button" class="btn btn-danger"
+                onclick="addComment(comment)">Comment</button></div>
+        <div id="allCommentsHeading">All Comments</div>
+        <div class="comment-container">
+            <div id="comments">
+            </div>
+        </div>
+
     </div>
 
-    <script src="scripts/index.js"></script>
-    <script src="scripts/common.js"></script>
-</body></div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/post.js"></script>
+</body>
 
 </html>
